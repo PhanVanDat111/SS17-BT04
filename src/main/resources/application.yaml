@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: ss17-bt04-cache-stampede
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      timeout: 300ms
+      connect-timeout: 300ms
+server:
+  port: 8624
+
+flash-sale:
+  cache:
+    ttl: 5m
+  db:
+    query-delay: 2000ms
+  load-test:
+    enabled: false
+    threads: 50
+
+logging:
+  level:
+    org.springframework.cache: TRACE
